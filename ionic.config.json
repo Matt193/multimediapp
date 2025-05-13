@@ -1,0 +1,7 @@
+{
+  "name": "registro-multimedia",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

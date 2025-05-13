@@ -1,0 +1,25 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Lista de Multimedia</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list *ngIf="multimediaItems.length > 0; else sinDatos">
+    <ion-item *ngFor="let item of multimediaItems">
+      <ion-thumbnail slot="start">
+        <img [src]="item.imageUrl" />
+      </ion-thumbnail>
+      <ion-label>
+        <h2>{{ item.description }}</h2>
+        <p>{{ item.date | date:'short' }}</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+
+  <ng-template #sinDatos>
+    <ion-text color="medium">
+      <p class="no-data">No hay registros por mostrar.</p>
+    </ion-text>
+  </ng-template>
+</ion-content>
